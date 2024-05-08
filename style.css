@@ -30,81 +30,82 @@ body {
     flex-direction: column;
     align-items: center;
 
-    .top {
+    nav {
+        z-index: 1;
         width: 100vw;
-        height: 32vh;
-        background-color: rgb(44, 44, 44);
-        box-shadow: 0 0 5px 3px rgb(0, 0, 0);
+        height: 30px;
+        background-color: rgb(32, 38, 50);
+        box-shadow: 0 0 5px 3px rgb(142, 142, 142);
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-
-        nav {
-            width: 100vw;
-            height: 6vh;
-            background-color: rgb(65, 97, 156);
-            box-shadow: 0 0 5px 3px rgb(0, 0, 0);
+        span {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 1000px;
+            height: 100%;
+            padding: 2px;
 
             div {
-                width: 80vw;
-                height: 6vh;
+                width: calc(100% / 6);
+                height: 100%;
+                
+                font-size: clamp(0.5rem, 0.4444rem + 0.2963vw, 0.8rem);
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                background-color: rgb(47, 47, 55);
+                color: rgb(207, 207, 207);
+                transition: 3.5s;
 
-                div {
-                    width: calc(100% / 6);
-                    height: 80%;
-                    margin: .2vw;
-                    font-size: .8rem;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    background-color: rgba(21, 21, 31, 0.562);
-                    color: rgb(207, 207, 207);
-                    transition: 3.5s;
-
-                    &:hover {
-                        color: rgb(43, 45, 61);
-                        background-color: rgb(201, 201, 216);
-                        transition: 1s;
-                    }
+                &:hover {
+                    color: rgb(43, 45, 61);
+                    background-color: rgb(201, 201, 216);
+                    transition: 1s;
                 }
+            }
+        }
+
+    }
+
+    .top {
+        width: 100vw;
+        height: calc((1px + .03vw)*120);
+        background-color: rgb(44, 44, 44);
+        box-shadow: 0 0 5px 3px rgb(0, 0, 0);
+
+        .titles {
+            border: 1px solid red;
+
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h1 {
+                margin-top: 10px;
+                font-size: clamp(0.8rem, 0.5037rem + 1.5802vw, 2.4rem);
+                text-shadow: 2px 4px 8px rgb(16, 177, 218);
+            }
+
+            h2 {
+                font-size: clamp(0.6rem, 0.3778rem + 1.1852vw, 1.8rem);
+            }
+
+            .cv_image {
+                margin-top: 15px;
+                width: 150px;
+                aspect-ratio: 1/1;
+                border: 4px solid rgb(255, 255, 255);
+                box-shadow: 0 4px 5px 0 gray;
+                border-radius: 50%;
+                background-image: url(resources/photo-1712277851184-fe23844036ab.webp);
+                background-size: cover;
             }
         }
     }
 
-    .top_me {
-        width: 100%;
-        height: 14vh;
-        position: absolute;
-        top: 10%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
 
-        h1 {
-            font-size: 2.2rem;
-            text-shadow: 2px 4px 8px rgb(16, 177, 218);
-        }
-
-        h2 {
-            font-size: 1.4rem;
-        }
-    }
-
-    .cv_image {
-        width: 24vh;
-        aspect-ratio: 1/1;
-        border: 4px solid rgb(255, 255, 255);
-        box-shadow: 0 4px 5px 0 gray;
-        border-radius: 50%;
-        position: relative;
-        top: -12vh;
-        background-image: url(resources/photo-1712277851184-fe23844036ab.webp);
-        background-size: cover;
-    }
 
     section {
         width: 80%;
@@ -124,7 +125,7 @@ body {
             h3 {
                 width: 100%;
                 text-align: center;
-                margin-top: 5rem;
+                margin-top: 1rem;
                 margin-bottom: 2rem;
                 border: 1px solid red;
             }
@@ -132,8 +133,8 @@ body {
     }
 
     .about {
+        margin-top: 100px;
         height: 52vh;
-        margin-top: -10rem;
 
 
         p {
@@ -147,11 +148,6 @@ body {
     .experience {
         height: 130vh;
         margin-top: 3rem;
-
-        h3 {
-            margin-top: 3rem;
-
-        }
 
         .lineTime {
             width: 80%;
@@ -168,22 +164,23 @@ body {
             .right {
                 width: 46%;
                 height: 100%;
-                border: 1px solid rgb(122, 165, 42); 
+                border: 1px solid rgb(122, 165, 42);
                 padding-top: 5rem;
             }
 
-            .left >div, .right >div {
+            .left>div,
+            .right>div {
                 height: 14rem;
                 border: 1px solid red;
                 margin-bottom: 6rem;
-                
+
                 h4 {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     height: 20%;
                     background-color: rgb(54, 54, 54);
-                    color:rgb(224, 224, 224);
+                    color: rgb(224, 224, 224);
                 }
             }
         }
