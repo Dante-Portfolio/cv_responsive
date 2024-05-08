@@ -47,28 +47,27 @@ body {
                 height: 8vh;
                 display: flex;
                 align-items: center;
-
-                div {
-                    width: calc(100% / 6);
-                    height: 92%;
-                    margin-top: 2px;
+                justify-content: center;
 
                     div {
-                        width: 100%;
-                        height: 80%;
+                        width: calc(100% / 6);
+                        height: 70%;
+                        margin: 4px;
                         font-size: 1.4rem;
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         background-color: rgba(44, 56, 56, 0.434);
                         color: grey;
-                        transition: 2s;
-                    }
+                        position: relative;
+                        top: 2px;
+                        transition: 2.5s;
 
-                    &:hover div {
-                        color: aqua;
-                        background-color: rgba(127, 240, 255, 0.175);
-                        transition: .5s;
+                        &:hover {
+                            color: aqua;
+                            background-color: rgba(127, 240, 255, 0.175);
+                            transition: .5s;
+                        }
                     }
                 }
             }
