@@ -49,31 +49,26 @@ body {
                 align-items: center;
                 justify-content: center;
 
-                    div {
-                        width: calc(100% / 6);
-                        height: 70%;
-                        margin: 4px;
-                        font-size: 1.4rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        background-color: rgba(44, 56, 56, 0.434);
-                        color: grey;
-                        position: relative;
-                        top: 2px;
-                        transition: 2.5s;
+                div {
+                    width: calc(100% / 6);
+                    height: 80%;
+                    margin: .2vw;
+                    font-size: 1.4rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: rgba(44, 56, 56, 0.204);
+                    color: grey;
+                    /* transition: 2.5s; */
 
-                        &:hover {
-                            color: aqua;
-                            background-color: rgba(127, 240, 255, 0.175);
-                            transition: .5s;
-                        }
+                    &:hover {
+                        color: rgb(225, 225, 225);
+                        background-color: rgba(255, 255, 255, 0.175);
+                        transition: .5s;
                     }
                 }
             }
         }
-
-        I
     }
 
     .top_me {
@@ -141,4 +136,13 @@ body {
         }
     }
 
+    .experience {
+        width: 80%;
+        height: 52vh;
+        border: 2px solid rgba(128, 128, 128, 0.289);
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
