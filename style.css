@@ -10,7 +10,7 @@
     --textColorLight: rgb(181, 181, 181);
     --textColorH1: rgb(255, 255, 255);
     --textColorH2: rgb(255, 255, 255);
-    --textColorH3:  rgb(73, 72, 72);
+    --textColorH3: rgb(73, 72, 72);
     --textColorH4: rgb(212, 212, 212);
 
     --textParagraph: clamp(0.6rem, 0.563rem + 0.1975vw, 0.8rem);
@@ -156,49 +156,51 @@ body {
                 justify-content: space-between;
 
                 li {
+                    width: 25%;
+                    border-radius: 5px;
+                    padding: 5px;
+                    box-shadow: 0 5px 10px rgb(44, 44, 44);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
 
                     div {
-
-                        width: 30%;
-                        margin-bottom: 60px;
-                        /* border: var(--border); */
-                        box-shadow: 0 6px 10px 0 rgb(17, 17, 17);
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                       
+                        width: 100%;
 
                         img {
                             width: 100%;
                             margin-bottom: -5px;
-                            border: var(--border);
                         }
 
-
                         h4 {
-                            margin-top: 4px;
-                            padding: 10px;
+                            padding: 6px;
                             width: 100%;
                             font-size: var(--textH4);
                             color: var(--textColorH4);
-                            background-color:rgb(18, 27, 25);
+                            background-color: rgb(18, 27, 25);
                             display: flex;
                             align-items: center;
                             justify-content: center;
                             text-align: center;
 
+                            &:last-child {
+                                padding: 2px;
+                                background-color: rgb(46, 67, 71);
+                            }
                         }
 
                         p {
-                            margin: -4px 0 0 0;
-                            border: var(--border);
                             background-color: rgb(255, 255, 255);
-                            border-radius: 0 0 4px 4px;
                             padding: 10px;
                             font-size: var(--textParagraph);
                         }
                     }
                 }
+            }
+
+            hr {
+                margin: 20px;
+                color: rgba(248, 248, 248, 0.248);
             }
         }
     }
@@ -208,4 +210,98 @@ body {
     }
 
     .experience {}
+
+    .skills {
+
+        article {
+            margin-bottom: 20px;
+
+            ul {
+                margin-bottom: 20px;
+
+                li {
+                    width: calc(100% / 4.4);
+                    font-size: var(--textH4);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding: 14px 8px 14px 8px;
+                    box-shadow: 0 5px 10px rgb(44, 44, 44);
+                    border: 1px solid rgba(87, 87, 87, 0.415);
+
+                    div:first-child {
+                        text-align: center;
+                    }
+
+                    div:nth-of-type(2) {
+                        margin-top: 5px;
+                        padding: 2px;
+                        width: 100%;
+                        height: 24px;
+                        border: 1px solid grey;
+                        box-shadow: 0 0 6px 0px rgb(43, 49, 49);
+
+                        div {
+                            width: 99%;
+                            height: 100%;
+                            border-right: 4px solid rgb(76, 76, 76);
+                            background-color: rgb(103, 165, 164);
+                            /* box-shadow: 0 12px 16px 0px rgba(29, 173, 170, 0.39); */
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        article:last-child {
+
+            li {
+                background-color: var(--backColorDarkTransparent);
+                color: rgb(224, 224, 224);
+
+                div:nth-of-type(2) {
+
+                    div {
+                        background-color: rgb(194, 81, 81);
+                        /* box-shadow: 0 12px 16px 0px rgba(196, 78, 78, 0.186); */
+
+                    }
+                }
+            }
+        }
+    }
+
+    .estudios {
+
+        .lineTime-studies {
+            width: 90%;
+            display: flex;
+
+            border: var(--border);
+
+            div:first-child {
+                width: 10%;
+                display: flex;
+                justify-content: center;
+
+                div {
+                    width: 1px;
+                    height: 100%;
+                    border: var(--border);
+                }
+            }
+
+            div:last-child {
+
+                ul {
+                    margin-left: 30px;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
 }
