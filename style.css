@@ -10,16 +10,18 @@
     --textColorLight: rgb(181, 181, 181);
     --textColorH1: rgb(255, 255, 255);
     --textColorH2: rgb(255, 255, 255);
+    --textColorH3:  rgb(73, 72, 72);
+    --textColorH4: rgb(212, 212, 212);
 
     --textParagraph: clamp(0.6rem, 0.563rem + 0.1975vw, 0.8rem);
     --textSpan: 0.6rem;
 
     --textH3: clamp(0.8rem, 0.7259rem + 0.3951vw, 1.2rem);
-    --textH4: clamp(0.6rem, 0.563rem + 0.1975vw, 0.8rem);
-    --textH5: clamp(0.3rem, 0.2444rem + 0.2963vw, 0.6rem);
+    --textH4: clamp(0.6rem, 0.5259rem + 0.3951vw, 1rem);
 
     --colorText: rgb(73, 72, 72);
     --backColorH4: rgb(44, 44, 44);
+    --backColorDarkTransparent: rgba(0, 0, 0, 0.859);
 }
 
 body {
@@ -136,7 +138,7 @@ body {
             h3 {
                 width: 100%;
                 text-align: center;
-                color: var(--colorText);
+                color: var(--textColorH3);
                 margin-bottom: 2rem;
             }
 
@@ -150,30 +152,51 @@ body {
                 width: 100%;
                 list-style: none;
                 padding: 0;
+                display: flex;
+                justify-content: space-between;
 
                 li {
-                    margin-bottom: 50px;
-                    background-color: white;
-                    border-radius: 8px;
-                    box-shadow: 0 10px 20px 5px gray;
-                    padding: 8px;
 
-                    h4 {
-                        height: 30px;
-                        font-size: var(--textH4);
+                    div {
+
+                        width: 30%;
+                        margin-bottom: 60px;
+                        /* border: var(--border); */
+                        box-shadow: 0 6px 10px 0 rgb(17, 17, 17);
                         display: flex;
+                        flex-direction: column;
                         align-items: center;
-                        justify-content: center;
-                        background-color: var(--backColorH4);
-                        border-radius: 6px;
-                        padding: 8px;
-                        color: var(--textColorLight);
-                    }
+                       
 
-                    p {
-                        padding: 10px;
-                        font-size: var(--textParagraph);
-                        width: 100%;
+                        img {
+                            width: 100%;
+                            margin-bottom: -5px;
+                            border: var(--border);
+                        }
+
+
+                        h4 {
+                            margin-top: 4px;
+                            padding: 10px;
+                            width: 100%;
+                            font-size: var(--textH4);
+                            color: var(--textColorH4);
+                            background-color:rgb(18, 27, 25);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+
+                        }
+
+                        p {
+                            margin: -4px 0 0 0;
+                            border: var(--border);
+                            background-color: rgb(255, 255, 255);
+                            border-radius: 0 0 4px 4px;
+                            padding: 10px;
+                            font-size: var(--textParagraph);
+                        }
                     }
                 }
             }
@@ -184,104 +207,5 @@ body {
         margin-top: 100px;
     }
 
-    .experience {
-        margin-top: 2rem;
-
-        .lineTime {
-            display: flex;
-            justify-content: space-between;
-
-            div[class*="container"] {
-                width: 100%;
-                padding-top: 20px;
-
-                li {
-
-                    div {
-                        height: 0;
-                        display: flex;
-                        align-items: center;
-
-                        span:first-child {
-                            width: 30px;
-                            height: 1px;
-                            border: 1px solid rgb(103, 103, 103);
-                        }
-
-                        span:last-child {
-
-                            width: 30px;
-                            height: 30px;
-                            background-color: var(--backColorH4);
-                            border-radius: 50%;
-                            font-size: var(--textSpan);
-                            color: var(--textColorLight);
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                        }
-                    }
-
-                    div[class*="left"] {
-                        position: relative;
-                        left: 100%;
-                        top: 15px;
-                    }
-
-                    div[class*="right"] {
-                        position: relative;
-                        right: 57px;
-                        top: 15px;
-
-                        span:first-child {
-                            order: 1;
-                        }
-                    }
-                }
-            }
-        }
-
-        div[class*="container"]:last-child {
-            padding-top: 80px;
-
-        }
-
-        .separator {
-            width: 1px;
-            border: 1px solid rgb(191, 191, 191);
-            margin-left: 35px;
-            margin-right: 35px;
-
-
-            /* div:first-child {
-                position: relative;
-                top: 0;
-            }
-
-            div:nth-child(2) {
-                position: relative;
-                top: 0;
-            }
-
-            div:nth-child(3) {
-                position: relative;
-                top: 0;
-            }
-
-            div:nth-child(4) {
-                position: relative;
-                top: 0;
-            }
-
-            div:nth-child(5) {
-                position: relative;
-                top: 0;
-            }
-
-            div:nth-child(6) {
-                position: relative;
-                top: 0;
-            } */
-        }
-    }
+    .experience {}
 }
