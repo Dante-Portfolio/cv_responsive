@@ -1,0 +1,85 @@
+@media only screen and (orientation: portrait) {
+
+
+    body {
+
+        header {
+            position: relative;
+            top: -30px;
+            background-image: url(../resources/pxfuel.jpg);
+            background-image: cover;
+
+            nav {
+                background-color: rgba(90, 90, 90, 0.715);
+                box-shadow: none;
+                width: 100px;
+                position: relative;
+                top: 0px;
+                left: -50px;
+                position: fixed;
+                transition: 1s;
+
+                &:hover,
+                &:hover span div {
+                    left: 0;
+                }
+
+
+                span {
+                    width: 100%;
+                    height: 300px;
+                    display: flex;
+                    align-items: left;
+                    flex-direction: column;
+                    position: relative;
+                    left: -4px;
+                    top: 164px;
+
+
+                    div {
+                        position: relative;
+                        left: -100%;
+                        color: black;
+                        background-color: rgb(230, 230, 230);
+                        width: 100%;
+                        height: calc(300px / 6);
+                        transition: 1s;
+
+                        &:hover {
+                            background-color: rgba(40, 40, 40, 0.734);
+                            color: rgb(255, 255, 255);
+                        }
+                    }
+                }
+            }
+        }
+
+        .experience {
+
+            ul {
+                display: flex;
+                flex-direction: column;
+
+                li {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+        .titles {
+
+            div {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+
+                div {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+
+    }
+}
