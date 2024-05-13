@@ -414,4 +414,43 @@ body {
             }
         }
     }
+
+    .contacto {
+
+        div {
+            width: 100%;
+
+            div:first-child {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 40px;
+
+                img {
+                    width: 20%;
+                }
+            }
+
+            div:last-child {
+                display: inline;
+ 
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    
+                    input, label, textarea, button {
+                        font-size: var(--textParagraph);
+                    }
+
+                    input {
+                        color:var(--colorText)
+                    }
+                    button {
+                        width: 20%
+                    }
+                }
+            }
+        }
+    }
 }
