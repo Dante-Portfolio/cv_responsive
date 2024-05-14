@@ -8,22 +8,26 @@
     :root {
         --cvImage: url("../resources/CV-Image.webp");
         --border: 2px solid rgba(128, 128, 128, 0.289);
+        --heightH4: 3rem;
+
         --textColorDark: rgb(59, 59, 59);
         --textColorLight: rgb(181, 181, 181);
         --textColorH1: rgb(255, 255, 255);
         --textColorH2: rgb(255, 255, 255);
         --textColorH3: rgb(73, 72, 72);
         --textColorH4: rgb(212, 212, 212);
+        --textColorH4: rgb(212, 212, 212);
 
-        --textParagraph: clamp(0.6rem, 0.563rem + 0.1975vw, 0.8rem);
-        --textSpan: 0.6rem;
-
-        --textH3: clamp(0.8rem, 0.7259rem + 0.3951vw, 1.2rem);
-        --textH4: clamp(0.6rem, 0.5259rem + 0.3951vw, 1rem);
+        --fontSizeParagraph: clamp(0.8rem, 0.763rem + 0.1975vw, 1rem);
+        --fontSizeSpan: 0.6rem;
+        --fontSizeH1: clamp(1.2rem, 0.9778rem + 1.1852vw, 2.4rem);
+        --fontSizeH2: clamp(0.8rem, 0.7259rem + 0.3951vw, 1.2rem);
+        --fontSizeH3: clamp(1rem, 0.9074rem + 0.4938vw, 1.5rem);
+        --fontSizeH4: clamp(0.8rem, 0.763rem + 0.1975vw, 1rem);
 
         --colorBody: white;
         --colorText: rgb(73, 72, 72);
-        --backColorH4: rgb(44, 44, 44);
+        --backColorH4: rgb(46, 67, 71);
         --backColorDarkTransparent: rgba(0, 0, 0, 0.859);
     }
 
@@ -37,6 +41,7 @@
             height: calc((1px + .02vw)*160);
             background-color: rgb(44, 44, 44);
             box-shadow: 0 0 20px rgb(44, 44, 44);
+
 
             nav {
                 width: 100vw;
@@ -88,13 +93,13 @@
                 h1 {
                     color: var(--textColorH1);
                     margin-top: 10px;
-                    font-size: clamp(0.8rem, 0.5037rem + 1.5802vw, 2.4rem);
-                    font-size: clamp(1.2rem, 0.9778rem + 1.1852vw, 2.4rem);
+                    font-size: var(--fontSizeH1);
                     text-shadow: 2px 8px 3px rgb(0, 0, 0);
                 }
 
                 h2 {
                     color: var(--textColorH2);
+                    font-size: var(--fontSizeH2);
                     font-size: clamp(0.6rem, 0.3778rem + 1.1852vw, 1.8rem);
                     text-shadow: 2px 8px 3px rgb(0, 0, 0);
                     margin-bottom: 4px;
@@ -139,6 +144,7 @@
                 padding: 3%;
 
                 h3 {
+                    font-size: var(--fontSizeH3);
                     width: 100%;
                     text-align: center;
                     color: var(--textColorH3);
@@ -146,7 +152,7 @@
                 }
 
                 p {
-                    font-size: var(--textParagraph);
+                    font-size: var(--fontSizeParagraph);
                     color: var(--colorText);
                 }
             }
@@ -184,9 +190,10 @@
                         h4 {
                             padding: 6px;
                             width: 100%;
-                            font-size: var(--textH4);
+                            height: var(--heightH4);
+                            font-size: var(--fontSizeH4);
                             color: var(--textColorH4);
-                            background-color: rgb(18, 27, 25);
+                            background-color: var(--backColorH4);
                             display: flex;
                             align-items: center;
                             justify-content: center;
@@ -194,14 +201,14 @@
 
                             &:last-child {
                                 padding: 2px;
-                                background-color: rgb(46, 67, 71);
+                                background-color: var(--backColorH4)
                             }
                         }
 
                         p {
                             background-color: rgb(255, 255, 255);
                             padding: 10px;
-                            font-size: var(--textParagraph);
+                            font-size: var(--fontSizeParagraph);
                         }
                     }
                 }
@@ -221,40 +228,52 @@
 
                 ul {
                     width: 100%;
-                    margin-bottom: 20px;
+                    margin-bottom: 60px;
                     display: flex;
                     justify-content: space-between;
 
                     li {
                         width: calc(100% / 4.4);
-                        font-size: var(--textH4);
                         display: flex;
                         flex-direction: column;
-                        padding: 14px 8px 14px 8px;
+                        padding: 4px;
                         box-shadow: 0 5px 10px rgb(44, 44, 44);
                         border: 1px solid rgba(87, 87, 87, 0.415);
 
-                        div:first-child {
+                        div {
+                            padding: 6px;
                             width: 100%;
-                            text-align: center;
-                        }
-
-                        div:nth-of-type(2) {
-                            margin-top: 5px;
-                            padding: 2px;
-                            width: 100%;
-                            height: 24px;
                             border: 1px solid grey;
-                            box-shadow: 0 0 6px 0px rgb(43, 49, 49);
+                            background-color: var(--backColorH4);
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            
+
+                            h4 {
+                                width: 100%;
+                                text-align: center;
+                                margin-bottom: 20px;
+                                color: var(--textColorH4);
+                                font-size: var(--fontSizeH4);
+
+                            }
 
                             div {
-                                width: 99%;
-                                height: 100%;
-                                border-right: 4px solid rgb(76, 76, 76);
-                                background-color: rgb(103, 165, 164);
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
+                                width: 90%;
+                                aspect-ratio: 1/1;
+                                padding: 2px;
+                                background-color: white;
+
+                                div {
+                                    width: 99%;
+                                    height: 100%;
+                                    border-right: 4px solid rgb(76, 76, 76);
+                                    background-color: rgb(103, 165, 164);
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
                             }
                         }
                     }
