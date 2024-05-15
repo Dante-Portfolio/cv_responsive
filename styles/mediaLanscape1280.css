@@ -45,6 +45,7 @@ and (orientation: landscape) {
                         width: 100%;
                         height: calc(300px / 6);
                         transition: 1s;
+                        font-size: var(--fontSizeH4);
 
                         &:hover {
                             background-color: rgba(40, 40, 40, 0.734);

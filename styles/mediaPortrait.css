@@ -44,6 +44,7 @@
                         width: 100%;
                         height: calc(300px / 6);
                         transition: 1s;
+                        font-size: var(--fontSizeH4);
 
                         &:hover {
                             background-color: rgba(40, 40, 40, 0.734);
@@ -54,37 +55,128 @@
             }
         }
 
-        .experience {
-            padding: 5%;
+        main {
 
-            ul {
-                display: flex;
-                flex-direction: column;
+            .experience {
+                padding: 5%;
 
-                li {
+                ul {
                     width: 100%;
-                    margin-bottom: 60px;
+                    display: flex;
+                    flex-direction: column;
+
+                    li {
+                        width: 100%;
+                        margin-bottom: 60px;
+                    }
+                }
+
+                hr {
+                    display: none;
                 }
             }
 
-            hr {
-                display: none;
+            .skills {
+
+                article {
+
+                    div {
+                        display: flex;
+                        width: 100%;
+
+                        ul {
+                            width: 50%;
+                            display: flex;
+                            flex-direction: column;
+
+                            li {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
             }
-        }
 
-        .titles {
+            .estudios {
 
-            div {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
+                .lineTime-studies {
+
+                    span {
+                        display: none;
+                    }
+
+                    .studies-histories {
+
+                        ul {
+                            width: 100%;
+                            margin: 0;
+
+                            li {
+                                flex-direction: column;
+
+                                div {
+                                    display: none;
+
+                                    img {
+                                        display: none;
+                                    }
+                                }
+
+                                span {
+                                    display: none;
+                                }
+
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            .titles {
 
                 div {
+                    display: flex;
+                    flex-direction: column;
                     width: 100%;
-                    margin-bottom: 20px;
+
+                    div {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+
+            .contacto {
+
+                article {
+                    width: 100%;
+
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        div:first-child {
+                            width: 100%;
+
+                            img {
+                                width: 40%;
+                            }
+                        }
+                    }
+
+                    div:last-child {
+
+                        form {
+
+                            & div {
+                                flex-direction: row;
+                            }
+                        }
+                    }
                 }
             }
         }
-
     }
 }
