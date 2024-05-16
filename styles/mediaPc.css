@@ -29,6 +29,31 @@
         --colorText: rgb(73, 72, 72);
         --backColorH4: rgb(46, 67, 71);
         --backColorDarkTransparent: rgba(0, 0, 0, 0.859);
+
+        /* CLASES */
+        *[conf*="boxCenter"] {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgb(255, 0, 144);
+        }
+
+        *[conf*="borderRed"] {
+            border: 1px solid red;
+        }
+
+        *[conf*="borderGreen"] {
+            border: 1px solid green;
+        }
+
+        *[conf*="borderBlue"] {
+            border: 1px solid blue;
+        }
+
+        *[conf*="relative"] {
+            border: 1px solid blue;
+        }
+
     }
 
     body {
@@ -240,51 +265,95 @@
 
                         li {
                             width: calc(100% / 4.4);
-                            display: flex;
-                            flex-direction: column;
                             padding: 4px;
                             box-shadow: 0 5px 10px rgb(44, 44, 44);
-                            border: 1px solid rgba(87, 87, 87, 0.415);
+                            border: 4px solid white;
+                            border-radius: 10px;
+                            margin-bottom: 40px;
 
                             div {
-                                padding: 6px;
-                                width: 100%;
-                                border: 1px solid grey;
-                                background-color: var(--backColorH4);
                                 display: flex;
                                 flex-direction: column;
                                 align-items: center;
+    
+                                width: 100%;
+                                border-radius: 10px;
+                                background-color: rgb(22, 22, 22);
 
 
                                 h4 {
                                     width: 100%;
+                                    border-top-left-radius: 10px;
+                                    border-top-right-radius: 10px;
                                     text-align: center;
-                                    margin-bottom: 20px;
                                     color: var(--textColorH4);
                                     font-size: var(--fontSizeH4);
-
+                                    background-color: var(--backColorH4);
                                 }
 
-                                div {
-                                    width: 90%;
-                                    aspect-ratio: 1/1;
-                                    padding: 2px;
-                                    background-color: white;
+                                .percentage {
+                                    position: relative;
+                                    width: 60%;
+                                    height: 200px;
 
-                                    div {
-                                        width: 99%;
-                                        height: 100%;
-                                        border-right: 4px solid rgb(76, 76, 76);
-                                        background-color: rgb(103, 165, 164);
+                                    .border1 {
+                                        width: 70%;
+                                        aspect-ratio: 1/1;
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        box-shadow: 0 10px 20px 0px rgba(30, 148, 169, 0.563);
+                                        transition: .3s;
+                                    }
+
+                                    .border2 {
+                                        user-select: none;
+                                        width: 70%;
+                                        aspect-ratio: 1/1;
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        font-size: var(--fontSizeH3);
+                                        color: rgba(255, 255, 255, 0.685);
+                                        filter: blur(.4px);
+                                        box-shadow: inset 0 0 20px 1px rgb(0, 217, 255);
+                                        transition: .3s;
+                                    }
+
+                                    span {
+                                        width: 90%;
+                                        aspect-ratio: 1/1;
                                         display: flex;
-                                        align-items: center;
                                         justify-content: center;
+
+                                        div {
+                                            user-select: none;
+                                            background-color: rgba(255, 255, 255, 0.974);
+                                            width: 10%;
+                                            height: 5%;
+                                            border-radius: 50%;
+                                            position: relative;
+                                            top: 20%;
+                                            left: 10%;
+                                            transform: translateX(-70%) translateY(-110%);
+                                            filter: blur(2px);
+                                            box-shadow: 0 0 10px 3px rgb(0, 217, 255);
+                                            transition: .3s;
+                                        }
                                     }
                                 }
                             }
+
+                            &:hover > div .percentage .border2 {
+                                box-shadow: inset 0 0 30px 1px rgb(0, 217, 255);
+                            }
+
+                            &:hover > div .percentage span div {
+                                transform: translateX(-70%) translateY(-110%) skew(22deg) scaleX(2);
+                            }
+
                         }
                     }
                 }
+
 
                 article:last-child {
 
